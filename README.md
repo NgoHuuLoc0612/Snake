@@ -2,8 +2,6 @@
 
 A modern, feature-rich implementation of the classic Snake game built with vanilla JavaScript, HTML5 Canvas, and CSS3. This game features multiple themes, difficulty levels, responsive design, and smooth gameplay mechanics.
 
-![Snake Game Screenshot](https://via.placeholder.com/800x400/667eea/ffffff?text=Snake+Game)
-
 ## 🎮 Features
 
 ### Core Gameplay
