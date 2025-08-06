@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Snake Game</h1>
+            <div class="score-display">
+                <span>Score: <span id="current-score">0</span></span>
+                <span>High Score: <span id="high-score">0</span></span>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="game-area">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div id="game-over-screen" class="game-over hidden">
+                    <h2>Game Over!</h2>
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="btn btn-primary">Play Again</button>
+                </div>
+                <div id="pause-screen" class="pause-screen hidden">
+                    <h2>Game Paused</h2>
+                    <p>Press SPACE to continue</p>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <div class="control-section">
+                    <h3>Controls</h3>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <span class="key">↑</span>
+                            <span>Up</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">↓</span>
+                            <span>Down</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">←</span>
+                            <span>Left</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">→</span>
+                            <span>Right</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="key">SPACE</span>
+                            <span>Pause</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>Settings</h3>
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <label for="difficulty">Difficulty:</label>
+                            <select id="difficulty">
+                                <option value="easy">Easy</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="hard">Hard</option>
+                                <option value="expert">Expert</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="theme">Theme:</label>
+                            <select id="theme">
+                                <option value="classic" selected>Classic</option>
+                                <option value="neon">Neon</option>
+                                <option value="dark">Dark Mode</option>
+                                <option value="nature">Nature</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="start-btn" class="btn btn-success">Start Game</button>
+                    <button id="reset-btn" class="btn btn-danger">Reset High Score</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <p>Use arrow keys to control the snake. Eat food to grow and increase your score!</p>
+        </footer>
+    </div>
+
+    <script src="js/constants.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/food.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/gameState.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/inputHandler.js"></script>
+    <script src="js/gameEngine.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
